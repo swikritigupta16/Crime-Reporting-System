@@ -43,7 +43,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="home.php"><b>Crime Portal</b></a>
+                <a class="navbar-brand" href="home.php"><b>Crime Diaries</b></a>
             </div>
             
             <div id="navbar" class="collapse navbar-collapse">
@@ -89,7 +89,7 @@
                    <tr>
                         <th scope="col">Date Of Update</th>
                         <th scope="col">Case Update</th>
-                   </tr>
+                   </tr>    
                </thead>
             <?php
                 while($rows1=mysqli_fetch_assoc($res2)){
@@ -107,7 +107,7 @@
             </table>
         </div>
     
-        <div style="position: fixed;
+        <div style="position: absolute;
           left: 0;
           bottom: 0;
           width: 100%;
@@ -115,7 +115,7 @@
           background-color: rgba(0,0,0,0.8);
           color: white;
           text-align: center;">
-         <h4 style="color: white;">&copy <b>Crime Portal 2018</b></h4>
+         <h4 style="color: white;">&copy <b>Crime Diaries...</b></h4>
        </div> 
     
      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>

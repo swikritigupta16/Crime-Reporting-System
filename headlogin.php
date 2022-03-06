@@ -81,7 +81,7 @@ if(isset($_POST['s']))
    background-color: rgba(0,0,0,0.8);
    color: white;
    text-align: center;">
-  <h4 style="color: white;">&copy <b>Crime Portal 2018</b></h4>
+  <h4 style="color: white;">&copy <b>Crime Diaries...</b></h4>
 </div>
 
 

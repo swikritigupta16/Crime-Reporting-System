@@ -17,13 +17,13 @@
     $cid=$_SESSION['cid'];
         
     $i_id=$_SESSION['email'];
-    $result1=mysqli_query("SELECT location FROM police_station where i_id='$i_id'",$conn);
+    $result1=mysqli_query($conn,"SELECT location FROM police_station where i_id='$i_id'");
       
     $q2=mysqli_fetch_assoc($result1);
     $location=$q2['location'];
     
     $query="select c_id,type_crime,d_o_c,description from complaint where c_id='$cid' and location='$location'";
-    $result=mysqli_query($query,$conn); 
+    $result=mysqli_query($conn,$query); 
     if(isset($_POST['assign']))
     {
       if($_SERVER["REQUEST_METHOD"]=="POST")
