@@ -17,7 +17,7 @@ if(isset($_POST['s'])){
         $mob=$_POST['mobile_number'];
        // $password=md5($u_pass);
        $reg="insert into user values('$u_name','$u_id','$u_pass','$u_addr','$a_no','$gen','$mob')";
-        mysqli_select_db("crime_portal");
+        mysqli_select_db($con,"crime_portal");
         $res=mysqli_query($con,$reg);
         if(!$res)
         {

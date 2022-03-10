@@ -9,7 +9,7 @@
     {
         die("could not connect".mysqli_error());
     }
-    mysqli_select_db("crime_portal",$conn);
+    mysqli_select_db($conn,"crime_portal");
     
     if(!isset($_SESSION['x']))
     header("location:userlogin.php");
@@ -32,7 +32,7 @@
 
             $_SESSION['cid']=$cid;
             
-            $resu=mysqli_query("SELECT a_no FROM complaint where c_id='$cid'",$conn);
+            $resu=mysqli_query($conn,"SELECT a_no FROM complaint where c_id='$cid'");
             $qn=mysqli_fetch_assoc($resu);
                 
             

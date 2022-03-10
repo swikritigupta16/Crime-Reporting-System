@@ -10,7 +10,7 @@
     {
         die("could not connect".mysqli_error());
     }
-    mysqli_select_db("crime_portal",$conn);
+    mysqli_select_db($conn,"crime_portal");
     
     
     if(!isset($_SESSION['x']))
@@ -21,9 +21,9 @@
     $c_id=$_SESSION['cid'];
         
     $query="select c_id,description,inc_status,pol_status from complaint natural join user where c_id='$c_id' and u_id='$u_id'";
-    $result=mysqli_query($query,$conn);
+    $result=mysqli_query($conn,$query);
     
-    $res2=mysqli_query("select d_o_u,case_update from update_case where c_id='$c_id'",$conn);
+    $res2=mysqli_query($conn,"select d_o_u,case_update from update_case where c_id='$c_id'");
   ?>
 
 	<title>Complaint Details</title>

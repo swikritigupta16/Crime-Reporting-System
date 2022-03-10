@@ -27,7 +27,7 @@ if(isset($_POST['s'])){
         $u_pass=$_POST['password'];
     
     $reg="insert into police_station values('$i_id','$i_name','$loc','$u_pass')";
-     mysqli_select_db("crime_portal");
+     mysqli_select_db($con,"crime_portal");
         $res=mysqli_query($con,$reg);
         if(!$res)
             {

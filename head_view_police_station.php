@@ -10,7 +10,7 @@
     {
         die("could not connect".mysqli_error());
     }
-    mysqli_select_db("crime_portal",$conn);
+    mysqli_select_db($conn,"crime_portal");
     
     $query="select i_id,i_name,location from police_station";
     $result=mysqli_query($conn,$query);  

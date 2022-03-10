@@ -12,7 +12,7 @@
     {
         die("could not connect".mysqli_error());
     }
-    mysqli_select_db("crime_portal",$conn);
+    mysqli_select_db($conn,"crime_portal");
     
     $cid=$_SESSION['cid'];
         
@@ -29,12 +29,12 @@
       if($_SERVER["REQUEST_METHOD"]=="POST")
       {
         $pname=$_POST['police_name'];
-        $res1=mysqli_query("SELECT p_id FROM police where p_name='$pname'",$conn);
+        $res1=mysqli_query($conn,"SELECT p_id FROM police where p_name='$pname'");
         $q3=mysqli_fetch_assoc($res1);
         $pid=$q3['p_id'];
       
       
-        $res=mysqli_query("update complaint set inc_status='Assigned',pol_status='In Process',p_id='$pid' where c_id='$cid'",$conn);
+        $res=mysqli_query($conn,"update complaint set inc_status='Assigned',pol_status='In Process',p_id='$pid' where c_id='$cid'");
       
         $message = "Case Assigned Successfully";
         echo "<script type='text/javascript'>alert('$message');</script>";
@@ -108,7 +108,7 @@
 <form method="post">
 <select class="form-control" name="police_name" style="margin-left:40%; width:250px;">
             <?php
-                        $p_name=mysqli_query("select p_name from police where location='$location'");
+                        $p_name=mysqli_query($conn,"select p_name from police where location='$location'");
                         while($row=mysqli_fetch_array($p_name))
                         {
                             ?>
@@ -130,7 +130,7 @@
    background-color: rgba(0,0,0,0.8);
    color: white;
    text-align: center;">
-  <h4 style="color: white;">&copy <b>Crime Portal 2018</b></h4>
+  <h4 style="color: white;">&copy <b>Crime Diaries</b></h4>
 </div>
  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>

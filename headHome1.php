@@ -11,7 +11,7 @@ session_start();
     {
         die("could not connect".mysqli_error());
     }
-    mysqli_select_db("crime_portal",$conn);
+    mysqli_select_db($conn,"crime_portal");
     if(isset($_POST['s1']))
     {
     if($_SERVER["REQUEST_METHOD"]=="POST")

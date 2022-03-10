@@ -109,7 +109,7 @@ session_start();
      <select name="loc" class="form-control" style="width: 250px;">
          
 						<?php
-                        $loc=mysqli_query("select location from police_station");
+                        $loc=mysqli_query($conn,"select location from police_station");
                         while($row=mysqli_fetch_array($loc))
                         {
                             ?>
