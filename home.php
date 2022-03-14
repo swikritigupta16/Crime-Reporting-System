@@ -25,25 +25,28 @@
 
     <body data-spy="scroll" data-target=".navbar" data-offset="51">
         <!-- Nav Bar Start -->
-        <div class="navbar navbar-expand-lg bg-light navbar-light">
-            <div class="container-fluid">
-                <a href="home.php" class="navbar-brand">Crime Diaries</a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+       
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #f2f0f0;">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <b> 
+  <a class="navbar-brand" href="home.php" style="color: #666464;">Crime Diaries</a></b>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="nav navbar-nav navbar-right">
+      <li class="nav-item active" >
+        <a class="nav-link" href="userlogin.php" style="color: #666464;"><i class="fa fa-user"></i> User Login </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="official_login.php" style="color: #666464;"><i class="fa fa-users"></i> Official Login</a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
 
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto">
-                        <a href="#home" class="nav-item nav-link active">Home</a>
-                        
-                        
-                        <a href="userlogin.php" class="nav-item nav-link active">User Login  <i class="fa fa-user"></i></a>
-                        <a href="official_login.php" class="nav-item nav-link active"> Official Login  <i class="fa fa-user"></i></a>
 
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <!-- Nav Bar End -->
 
 
@@ -124,9 +127,7 @@ strongly focus on providing the justice to the victims by all the fair means by 
                                 <div class="progress">
                                     <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
-                            </div>
-                            <a class="btn" href="">Learn More</a>
-                        </div>
+                           
                     </div>
                 </div>
             </div>
@@ -314,7 +315,7 @@ which can issue writs for enforcing fundamental rights.
                             <div class="price-footer">
                                 <div class="price-action">
                                     <br>
-                                    <a class="btn" href="">Order Now</a>
+                                    <a class="btn" href="registration.php">Register</a>
                                 </div>
                             </div>
                         </div>
@@ -336,7 +337,7 @@ which can issue writs for enforcing fundamental rights.
                             </div>
                             <div class="price-footer">
                                 <div class="price-action">
-                                    <a class="btn" href="">Order Now</a>
+                                    <a class="btn" href="userlogin.php">Login</a>
                                 </div>
                             </div>
                         </div>
@@ -358,7 +359,7 @@ which can issue writs for enforcing fundamental rights.
                             </div>
                             <div class="price-footer">
                                 <div class="price-action">
-                                    <a class="btn" href="">Order Now</a>
+                                    <a class="btn" href="userlogin.php">Log/View</a>
                                 </div>
                             </div>
                         </div>
