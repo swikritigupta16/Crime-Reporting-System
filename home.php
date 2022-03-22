@@ -215,7 +215,7 @@ identity/ information leak.
                         <div class="timeline-text">
                             <div class="timeline-date">Articles 14-18</div>
                             <h2>Right to Equality</h2>
-                            <h4>Soft Agency, San Francisco, CA</h4>
+                
                             <p>
                                 Right to Equality ensures equal rights for all the citizens. The Right to Equality prohibits inequality on the basis of 
 caste, religion, place of birth, race, or gender. This right also includes the abolition of titles as well as untouchability.
@@ -226,7 +226,7 @@ caste, religion, place of birth, race, or gender. This right also includes the a
                         <div class="timeline-text">
                             <div class="timeline-date">Articles 19–22</div>
                             <h2>Right to Freedom</h2>
-                            <h4>Soft Agency, San Francisco, CA</h4>
+                        
                             <p>
                                 It include various rights i.e. freedom of speech, freedom of expression, freedom of 
 assembly without arms, freedom of movement throughout the territory of our country, freedom of association, freedom to practice any profession, freedom to 
@@ -238,7 +238,7 @@ reside in any part of the country.However, these rights have their own restricti
                         <div class="timeline-text">
                             <div class="timeline-date">Articles 23–24</div>
                             <h2>Right against Exploitation</h2>
-                            <h4>Soft Agency, San Francisco, CA</h4>
+                            
                             <p>
                                Right against Exploitation condemns human trafficking, child labor, forced labor making it an offense punishable by law, 
 and also prohibit any act of compelling a person to work without wages where he was legally entitled not to work or to receive remuneration for it. Unless 
@@ -250,7 +250,7 @@ it is for the public purpose, like community services or NGO work.
                         <div class="timeline-text">
                             <div class="timeline-date">Articles 25–28</div>
                             <h2>Right to Freedom of Religion</h2>
-                            <h4>Soft Agency, San Francisco, CA</h4>
+                    
                             <p>
                                 Right to Freedom of Religion guarantees religious freedom and ensures secular states in India. The Constitutions says that
  the States should treat all religions equally and impartially and that no state has an official religion. It also guarantees all people the freedom of
@@ -262,7 +262,7 @@ it is for the public purpose, like community services or NGO work.
                         <div class="timeline-text">
                             <div class="timeline-date">Articles 29–30</div>
                             <h2>Cultural and Educational Rights</h2>
-                            <h4>Soft Agency, San Francisco, CA</h4>
+                            
                             <p>
                                 Cultural and Educational Rights protects the rights of cultural, religious and linguistic minorities by enabling them to 
 conserve their heritage and protecting them against discrimination. Educational rights ensure education for everyone irrespective of their caste, gender, 
@@ -274,7 +274,7 @@ religion, etc.
                         <div class="timeline-text">
                             <div class="timeline-date">Articles 32-35</div>
                             <h2>Right to Constitutional Remedies</h2>
-                            <h4>Soft Agency, San Francisco, CA</h4>
+                            
                             <p>
                                 The Constitution guarantees remedies if citizens’ fundamental rights are violated. The government cannot infringe upon or
  curb anyone’s rights. When these rights are violated, the aggrieved party can approach the courts. Citizens can even go directly to the Supreme Court 
@@ -419,23 +419,23 @@ which can issue writs for enforcing fundamental rights.
             <div class="container-fluid">
                 <div class="container">
                     <div class="footer-info">
-                        <h2>Kate Winslet</h2>
-                        <h3>123 Street, New York, USA</h3>
+                        <h2>Crime Diaries</h2>
+                        <h3>Satyamev Jayate</h3>
                         <div class="footer-menu">
                             <p>+012 345 67890</p>
-                            <p>info@example.com</p>
+                            <p>crimediaries2@gmail.com</p>
                         </div>
                         <div class="footer-social">
-                            <a href=""><i class="fab fa-twitter"></i></a>
-                            <a href=""><i class="fab fa-facebook-f"></i></a>
-                            <a href=""><i class="fab fa-youtube"></i></a>
-                            <a href=""><i class="fab fa-instagram"></i></a>
-                            <a href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/login/"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://youtube.com/"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/accounts/login/"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/login"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="container copyright">
-                    <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved | Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                    <p>&copy; <a href="#">Crime Diaries</a>, All Right Reserved | Designed By Eradicators</p>
                 </div>
             </div>
         </div>
