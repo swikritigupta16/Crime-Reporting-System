@@ -8,7 +8,9 @@
 
 	<link rel="stylesheet" type="text/css" href="official_login.css">
 </head>
-<body>
+<body style="background-image: url(background.jpg);
+    background-position: center; 
+    background-size: cover;">
 
  <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -38,7 +40,7 @@
                     <div class="caption">
                         <h3>Police Login</h3>
                         <p>
-                            <a href="policelogin.php" class="btn btn-primary">Police Login</a>
+                            <a href="policelogin.php" class="btn btn" style="background:#0DB8DE; color: white;">Click Here</a>
                         </p>
                     </div>
                 </div>
@@ -49,7 +51,7 @@
                     <div class="caption">
                         <h3>Incharge Login</h3>
                         <p>
-                            <a href="inchargelogin.php" class="btn btn-primary">Incharge Login</a>
+                            <a href="inchargelogin.php" class="btn btn" style="background:#0DB8DE; color: white;">Click Here</a>
                         </p>
                     </div>
                 </div>
@@ -60,7 +62,7 @@
                     <div class="caption">
                         <h3>HQ Login</h3>
                         <p>
-                            <a href="headlogin.php" class="btn btn-primary">HQ Login</a>
+                            <a href="headlogin.php" class="btn btn" style="background:#0DB8DE; color: white;">Click Here</a>
                         </p>
                     </div>
                 </div>

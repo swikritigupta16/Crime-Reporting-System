@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<link href="userlogin.css" rel="stylesheet">
+
 <?php
 
     
@@ -68,9 +71,10 @@ var x3=sta3.indexOf(' ');
     
 	<title>Complainant Login</title>
 </head>
-<body style="background-size: cover;
-    background-image: url(regi_bg.jpeg);
-    background-position: center;">
+<body style=" background: #222D32;
+    font-family: 'Roboto', sans-serif;">
+
+
 	<nav class="navbar navbar-default navbar-fixed-top" style="height: 60px;">
   <div class="container">
     <div class="navbar-header">
@@ -86,31 +90,50 @@ var x3=sta3.indexOf(' ');
     </div>
   </div>
  </nav>
- <div  align="center" >
-	<div class="form" style="margin-top: 15%">
-		<form method="post">
-  <div class="form-group" style="width: 30%">
-    <label for="exampleInputEmail1"><h1 style="color: #fff;">User Id</h1></label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" size="5" placeholder="Enter Email id" required name="email" onfocusout="f1()">
-     </div>
-  <div class="form-group" style="width:30%">
-    <label for="exampleInputPassword1"><h1 style="color: #fff;">Password</h1></label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required name="password" onfocusout="f1()">
-  </div>
-  
-  <button type="submit" class="btn btn-primary" name="s" onclick="f1()">Submit</button>
-</form>
-	</div>
-</div>
-<div style="position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: rgba(0,0,0,0.7);
-   color: white;
-   text-align: center;">
-  <h4 style="color: white;">&copy <b>Crime Portal 2018</b></h4>
-</div>
+
+
+
+ 
+ <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-2"></div>
+            <div class="col-lg-6 col-md-8 login-box">
+                <div class="col-lg-12 login-key">
+                    <i class="fa fa-user" aria-hidden="true"></i> 
+                    
+                </div>
+                <div class="col-lg-12 login-title">
+                    USER PANEL
+                </div>
+
+                <div class="col-lg-12 login-form">
+                    <div class="col-lg-12 login-form">
+                        <form method="post">
+                            <div class="form-group">
+                                <label class="form-control-label" for="exampleInputEmail1">USERNAME</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required name="email" onfocusout="f1()">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label" for="exampleInputPassword1">PASSWORD</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" required name="password" onfocusout="f1()">
+                            </div>
+
+                            <div class="col-lg-12 loginbttm">
+                                <div class="col-lg-6 login-btm login-text">
+                                    <!-- Error Message -->
+                                </div>
+                                <div class="col-lg-6 login-btm login-button">
+                                    <button type="submit" class="btn btn-outline-primary" style = "border-color: #0DB8DE;" name="s" onclick="f1()">LOGIN</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-2"></div>
+            </div>
+        </div>
+
+        
 
 </body>
 </html>

@@ -1,8 +1,4 @@
-body {
-    background-image: url(official_login_bg.jpg);
-    background-position: center; 
-    background-size: cover;
-}
+
 
 body,
 html {
@@ -11,3 +7,5 @@ html {
     font-family: "Lato";
     color: white;
 }
+
+
