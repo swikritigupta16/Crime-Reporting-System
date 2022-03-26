@@ -840,6 +840,7 @@ a:focus {
     background: transparent;
     box-shadow: inset 0 0 0 0 rgb(0, 0, 77);
     border-color: rgb(0, 0, 77);
+    
 }
 
 
@@ -1065,3 +1066,14 @@ a:focus {
         padding: 0 5px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+

@@ -6,6 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
+
+  <link href="inchargelogin.css" rel="stylesheet">
+
 	<title>Incharge Login</title>
    <?php
     
@@ -62,12 +65,13 @@ if(isset($_POST['s']))
 }
 </script>
 </head>
-<body style="color: black;background-image: url(locker.jpeg);background-size: 100%;background-repeat: no-repeat;back">
+<body>
+
 	<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
+    
     <div class="navbar-header">
-     
-      <a class="navbar-brand" href="home.php"><b>Crime Portal</b></a>
+      &nbsp; 
+      <a class="navbar-brand" href="home.php"><b> &nbsp; &nbsp; &nbsp; Crime Diaries</b></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -76,34 +80,40 @@ if(isset($_POST['s']))
         
       </ul>
     </div>
-  </div>
+  
  </nav>
- <div  align="center" >
-	<div class="form" style="margin-top: 15%">
-		 <form method="post">
-  <div class="form-group" style="width: 30%">
-    <label for="exampleInputEmail1"  ><h1 style="color:white">Incharge Id</h1></label>
-    <input type="text" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" size="5" placeholder="Enter user id" required onfocusout="f1()">
-     </div>
-  <div class="form-group" style="width:30%">
-    <label for="exampleInputPassword1"><h1 style="color:white">Password</h1></label>
-    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required onfocusout="f1()">
-  </div>
-  
-  
-  <button type="submit" class="btn btn-primary" name="s">Submit</button>
-</form>
+
+
+
+ <div class="container">
+	<div class="screen">
+		<div class="screen__content">
+			<form class="login" method="post">
+        <h2> <b> Incharge Panel  <b> </h2>
+				<div class="login__field">
+					<i class="login__icon fa fa-user"></i>
+					<input type="text" class="login__input" placeholder="Username" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" required onfocusout="f1()" >
+				</div>
+				<div class="login__field">
+					<i class="login__icon fa fa-lock"></i>
+					<input type="password" class="login__input" placeholder="Password" name="password" id="exampleInputPassword1" required onfocusout="f1()" >
+				</div>
+				<button class="button login__submit" name="s">
+					<span class="button__text">Log In </span>
+					<i class="button__icon fa fa-chevron-right"></i>
+				</button>				
+			</form>
+		</div>
+    
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
 </div>
-<div style="position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   height: 30px;
-   background-color: rgba(0,0,0,0.8);
-   color: white;
-   text-align: center;">
-  <h4 style="color: white;">&copy <b>Crime Portal 2018</b></h4>
-</div>
+
 
 </body>
 </html>

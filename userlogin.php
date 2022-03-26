@@ -79,7 +79,7 @@ var x3=sta3.indexOf(' ');
   <div class="container">
     <div class="navbar-header">
      
-      <a class="navbar-brand" href="home.php" style="margin-top: 5%;"><b>Crime Portal</b></a>
+      <a class="navbar-brand" href="home.php" style="margin-top: 5%;"><b>Crime Diaries</b></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -117,9 +117,10 @@ var x3=sta3.indexOf(' ');
                                 <label class="form-control-label" for="exampleInputPassword1">PASSWORD</label>
                                 <input type="password" class="form-control" id="exampleInputPassword1" required name="password" onfocusout="f1()">
                             </div>
-
+ 
                             <div class="col-lg-12 loginbttm">
                                 <div class="col-lg-6 login-btm login-text">
+                                    <b> <p>Not Registered ? <a href="registration.php"> Sign Up now </a> <p> </b> 
                                     <!-- Error Message -->
                                 </div>
                                 <div class="col-lg-6 login-btm login-button">

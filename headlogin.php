@@ -2,12 +2,97 @@
 <html>
 <head>
  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 	
 	<title>Head Login</title>
+
+<style>
+
+.main-content{
+	width: 50%;
+	border-radius: 20px;
+	box-shadow: 0 5px 5px rgba(0,0,0,.4);
+	margin: 5em auto;
+	display: flex;
+  
+}
+.company__info{
+	background-color: #4d2600;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #fff;
+}
+.fa-android{
+	font-size:3em;
+}
+@media screen and (max-width: 640px) {
+	.main-content{width: 90%;}
+	.company__info{
+		display: none;
+	}
+	.login_form{
+		border-top-left-radius:20px;
+		border-bottom-left-radius:20px;
+	}
+}
+@media screen and (min-width: 642px) and (max-width:800px){
+	.main-content{width: 70%;}
+}
+.row > h2{
+	color: #4d2600;
+}
+.login_form{
+	background-color: #fff;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-top:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+form{
+	padding: 0 2em;
+}
+.form__input{
+	width: 100%;
+	border:0px solid transparent;
+	border-radius: 0;
+	border-bottom: 1px solid #aaa;
+	padding: 1em .5em .5em;
+	padding-left: 2em;
+	outline:none;
+	margin:1.5em auto;
+	transition: all .5s ease;
+}
+.form__input:focus{
+	border-bottom-color: #4d2600;
+	box-shadow: 0 0 5px rgba(0,80,80,.4); 
+	border-radius: 4px;
+}
+.btn{
+	transition: all .5s ease;
+	width: 70%;
+	border-radius: 30px;
+	color:#4d2600;
+	font-weight: 600;
+	background-color: #fff;
+	border: 1px solid #4d2600;
+	margin-top: 1.5em;
+	margin-bottom: 1em;
+}
+.btn:hover, .btn:focus{
+	background-color: #4d2600;
+	color:#fff;
+}
+
+</style>
+
+
   <?php
 
 if(isset($_POST['s']))
@@ -40,12 +125,12 @@ if(isset($_POST['s']))
 }
 ?> 
 </head>
-<body style="color: black;background-image: url(locker.jpeg);background-size: 100%;background-repeat: no-repeat;back">
+<body style="background:#804000;">
 	<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
      
-      <a class="navbar-brand" href="home.php"><b>Crime Portal</b></a>
+      <a class="navbar-brand" href="home.php"><b>Crime Diaries</b></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -56,33 +141,41 @@ if(isset($_POST['s']))
     </div>
   </div>
  </nav>
- <div  align="center" >
-  <div class="form" style="margin-top: 15%">
-    <form method="post">
-  <div class="form-group" style="width: 30%">
-    <label for="exampleInputEmail1"  ><h1 style="color:white">HQ Id</h1></label>
-    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" size="5" placeholder="Enter user id" required>
-     </div>
-  <div class="form-group" style="width:30%">
-    <label for="exampleInputPassword1"><h1 style="color:white">Password</h1></label>
-    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
-  </div>
-  
-  
-  <button type="submit" class="btn btn-primary" name="s">Submit</button>
-</form>
-  </div>
-</div>
-<div style="position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   height: 30px;
-   background-color: rgba(0,0,0,0.8);
-   color: white;
-   text-align: center;">
-  <h4 style="color: white;">&copy <b>Crime Diaries...</b></h4>
-</div>
+
+ 
+
+	<!-- Main Content -->
+	<div class="container-fluid" style="margin-top:80px;">
+		<div class="row main-content bg-success text-center">
+			<div class="col-md-4 text-center company__info">
+				<span class="company__logo"><h2><i class="fa fa-user-circle fa-3x"></i></h2></span>
+				<h4 class="company_title"> HeadQuarters</h4>
+			</div>
+			<div class="col-md-8 col-xs-12 col-sm-12 login_form ">
+				<div class="container-fluid">
+					<div class="row">
+						<h2> <b>Head Panel </b> </h2>
+					</div>
+					<div class="row">
+						<form control="" class="form-group" method="post">
+							<div class="row">
+								<input type="email" name="email" id="exampleInputEmail1" class="form__input" aria-describedby="emailHelp" placeholder="Username" required>
+							</div>
+							<div class="row"> 
+								<input type="password" name="password" id="exampleInputPassword1" class="form__input"  placeholder="Password" required>
+							</div>
+							
+							<div class="row">
+								<input type="submit" value="Login" class="btn"  name="s">
+							</div>
+						</form>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	
 
 
 </body>
