@@ -1,3 +1,4 @@
+
  <!DOCTYPE html>
 <html>
 <?php
@@ -88,7 +89,18 @@ if(isset($_POST['s'])){
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-<link href="complainer_page.css" rel="stylesheet" type="text/css" media="all" />
+<!-- <link href="complainer_page.css" rel="stylesheet" type="text/css" media="all" /> -->
+
+<!-- Icons font CSS-->
+<link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+   
+<link href="register.css" rel="stylesheet" type="text/css" smedia="all">
 
 </head>
 <body>
@@ -102,7 +114,7 @@ if(isset($_POST['s'])){
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="home.php"><b>Crime Portal</b></a>
+      <a class="navbar-brand" href="home.php"><b>Crime Diaries</b></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -112,34 +124,92 @@ if(isset($_POST['s'])){
   </div>
 </nav>
 	
-<div class="video" style="margin-top: 5%"> 
-	<div class="center-container">
-		 <div class="bg-agile">
-			<br><br>
-			<div class="login-form">	
-				<form action="#" method="post">
-					<p style="color:#dfdfdf">Full Name</p><input type="text"  name="name"  required="" id="name1" onfocusout="f1()" />
-					<p style="color:#dfdfdf">Email-Id</p><input type="email"  name="email"  required="" id="email1" onfocusout="f1()"/>
-                    <p style="color:#dfdfdf">Password</p><input type="text"  name="password"  placeholder="6 Character minimum" pattern=".{6,}" id="pass" onfocusout="f1()"/>
-					<p style="color:#dfdfdf">Home Adress</p><input type="text"  name="adress"  required="" id="addr" onfocusout="f1()"/>
-					<p style="color:#dfdfdf">Aadhar Number</p><input type="text"  name="aadhar_number" minlength="12" maxlength="12" required pattern="[123456789][0-9]{11}" id="aadh" onfocusout="f1()"/>
-					<div class="left-w3-agile">
-						<p style="color:#dfdfdf">Gender</p><select class="form-control" name="gender">
-							<option>Male</option>
-							<option>Female</option>
-							<option>Others</option>
-						</select>
-					</div>
-					<div class="right-agileits">
-						<p style="color:#dfdfdf">Mobile</p><input type="text"  name="mobile_number" required pattern="[6789][0-9]{9}" minlength="10" maxlength="10" id="mobno" onfocusout="f1()"/>
-					</div>
-					<input type="submit" value="Submit" name="s">
-				</form>	
-			</div>	
-		</div>
-	</div>	
-</div>	
- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+
+			<div class="page-wrapper bg-red p-t-180 p-b-100 font-robo">
+        <div class="wrapper wrapper--w960">
+            <div class="card card-2">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">Register</h2>
+                    <form action="#" method="post">
+                    <div class="one-field">
+                        <div class="input-group">
+                            <input class="input--style-2" type="text" placeholder="Full Name" name="name" required="" id="name1" onfocusout="f1()" />
+                        </div>
+                      </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-2" type="email" placeholder="Email-ID" name="email" required="" id="email1" onfocusout="f1()"/>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group-select">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="gender">
+                                            <option disabled="disabled" selected="selected">Gender</option>
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                            <option>Other</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="one-field">
+                        <div class="input-group">
+                               
+                                 <input class="input--style-2" type="password" name="password" placeholder="Password" pattern=".{6,}" id="pass" onfocusout="f1()"/>
+                                
+      
+                        </div> </div>
+
+                        <div class="one-field">
+                        <div class="input-group">
+                           
+                                    <input class="input--style-2" type="text" placeholder="Address" name="adress" required="" id="addr" onfocusout="f1()"/>
+                              
+                           
+                        </div></div>
+                        
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-2" type="text" placeholder="Aadhar Number" name="aadhar_number" minlength="12" maxlength="12" required pattern="[123456789][0-9]{11}" id="aadh" onfocusout="f1()">
+                                    
+                                </div>
+                            </div>
+                           <div class="col-2">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                      <input class="input--style-2" type="text" placeholder="Mobile Number" name="mobile_number" required pattern="[6789][0-9]{9}" minlength="10" maxlength="10" id="mobno" onfocusout="f1()"/>  
+                                      
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="p-t-30">
+                            <button class="btn btn--radius btn--green" type="submit" name="s">Submit</button>
+                        </div>
+                    </form>
+               
+            </div>
+        </div>
+    </div>
+
+     <!-- Jquery JS-->
+     <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    
+
+ <script src="register.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>
