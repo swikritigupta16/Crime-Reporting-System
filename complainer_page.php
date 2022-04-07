@@ -34,14 +34,30 @@ if(isset($_POST['s'])){
     if($_SERVER["REQUEST_METHOD"]=="POST")
     {
         
-        
+      
         $location=$_POST['location'];
-        $type_crime=$_POST['type_crime'];
+
+        $type_crime = "type_crime";
+        $type_crime1 = "type_crime1";
+
+        if($_POST[$type_crime1]){
+          $type_crime=$_POST['type_crime1'];
+
+        }
+        elseif($_POST[$type_crime]){
+          $type_crime=$_POST['type_crime'];
+        }
+
+        else{
+          
+        }
+
+
         $d_o_c=$_POST['d_o_c'];
         $description=$_POST['description'];
         
         $var=strtotime(date("Ymd"))-strtotime($d_o_c);
-        
+   
         
     if($var>=0)
     {
@@ -81,6 +97,19 @@ if(isset($_POST['s'])){
           alert("Space Found");
         }
 }
+
+
+
+function ShowHideDiv() {
+        var crime = document.getElementById("crime");
+        var dvcrime = document.getElementById("dvcrime");
+        dvcrime.style.display = crime.value == "Other" ? "block" : "none";
+    }
+     
+
+
+
+
  </script>
    
 <head>
@@ -96,9 +125,7 @@ if(isset($_POST['s'])){
 
 </head>
 
-<body style="background-size: cover;
-    background-image: url(home_bg1.jpeg);
-    background-position: center;">
+<body style=" background: #222D32;">
 	<nav  class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -131,37 +158,53 @@ if(isset($_POST['s'])){
 		 <div class="bg-agile">
 			<br><br>
 			<div class="login-form"><p><h2 style="color:white">Welcome <?php echo "$u_name" ?></h2></p><br>
-                                    <p><h2>Log New Complain</h2></p><br>	
+                                    <p style="color:#0DB8DE;"><h2>Log New Complain</h2></p><br>	
 				<form action="#" method="post" style="color: gray">Aadhar
 					<input type="text"  name="aadhar_number" placeholder="Aadhar Number" required="" disabled value=<?php echo "$a_no"; ?>>
 					
+          
+          <div class="top-w3-agile" style="color: gray">Upload Aadhar Card/ Govt. Official ID 
+          <br><br>
+          <input type="file" style="top-padding:10px;" name="aadhar_pic" placeholder="" required=""> 
+          </div>
+          <br>
+
 				<div class="top-w3-agile" style="color: gray">Location of Crime
-                    
-                    <select class="form-control" name="location">
-						<?php
-                        $loc=mysqli_query($conn,"select location from police_station");
-                        while($row=mysqli_fetch_array($loc))
-                        {
-                            ?>
-                                	<option> <?php echo $row[0]; ?> </option>
-                            <?php
-                        }
-                        ?>
-					
-				    </select>
+        <input type="text"  name="location" placeholder="Enter State" required="">
 				</div>
-				<div class="top-w3-agile" style="color: gray">Type of Crime
-					<select class="form-control" name="type_crime">
-						<option>Theft</option>
-						<option>Robbery</option>
+
+				<div class="top-w3-agile" style="color: gray" >Type of Crime
+					<select class="form-control" name="type_crime" id="crime" onchange = "ShowHideDiv()" >
+
+						            <option>Theft</option>
                         <option>Pick Pocket</option>
                         <option>Murder</option>
                         <option>Rape</option>
                         <option>Molestation</option>
                         <option>Kidnapping</option>
                         <option>Missing Person</option>
+                        <option>Dowry</option>
+                        <option>Domestic Violence</option>
+                        <option>Assault</option>
+                        <option value="Other">Other</option>
 				    </select>
-				</div>
+				
+          </div>
+
+        <div id="dvcrime" style="display: none">
+                <hr>
+                Specify Crime
+                <input type="text" name="type_crime1"/>
+               </div>  
+  
+
+
+        <div class="top-w3-agile" style="color: gray">Upload Proof (if any)
+          <br><br>
+          <input type="file" style="top-padding:10px;" name="proof"> 
+          </div>
+          <br>
+
 					<div class="Top-w3-agile" style="color: gray">
 					Date Of Crime : &nbsp &nbsp  
 						<input style="background-color: #313131;color: white" type="date" name="d_o_c" required>
@@ -169,24 +212,15 @@ if(isset($_POST['s'])){
 					<br>
 					<div class="top-w3-agile" style="color: gray">
 					Description
-						<textarea  name="description" rows="20" cols="50" placeholder="Describe the incident in details with time" onfocusout="f1()" id="desc" required></textarea>
+						<textarea  name="description" rows="20" cols="50" placeholder="Describe the incident in details along with time and full address." onfocusout="f1()" id="desc" required></textarea>
 					</div>
-					<input type="submit" value="Submit" name="s">
+					<input type="submit" value="Submit" name="s" style="background: #0DB8DE;">
 				</form>	
 			</div>	
 		</div>
 	</div>	
 </div>	
-<div style="position: relative;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   height: 30px;
-   background-color: rgba(0,0,0,0.8);
-   color: white;
-   text-align: center;">
-  <h4 style="color: white;">&copy <b>Crime Portal 2018</b></h4>
-</div>
+
  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>

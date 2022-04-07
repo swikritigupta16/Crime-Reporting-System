@@ -56,7 +56,7 @@
       }
     </script>
 </head>
-<body>
+<body style="background:#424242;">
 	<nav  class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -78,6 +78,8 @@
     </div>
   </div>
  </nav>
+
+ <br>
 <div style="padding:50px; margin-top:10px;">
    <table class="table table-bordered">
     <thead class="thead-dark" style="background-color: black; color: white;">
@@ -169,18 +171,7 @@
   </div>
 
  </div>
-    <div style="position: relative;
-    float: left;
-    margin-bottom: 0px;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   height: 30px;
-   background-color: rgba(0,0,0,0.8);
-   color: white;
-   text-align: center;">
-  <h4 style="color: white;">&copy <b>Crime Portal 2018</b></h4>
-</div> 
+    
 
  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>

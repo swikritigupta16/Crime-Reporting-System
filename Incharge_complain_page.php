@@ -71,7 +71,7 @@
 </script>
     
 </head>
-<body style="background-color: #dfdfdf">
+<body style="background-color: rgb(0, 0, 77);">
 	<nav  class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -101,7 +101,7 @@
     <form style="margin-top: 7%; margin-left: 40%;" method="post">
       <input type="text" name="cid" style="width: 250px; height: 30px; background-color:white;" placeholder="&nbsp Complaint Id" id="ciid" onfocusout="f1()" required>
         <div>
-      <input class="btn btn-primary" type="submit" value="Search" name="s2" style="margin-top: 10px; margin-left: 11%;">
+      <input class="btn btn-primary" type="submit" value="Search" name="s2" style=" background: #d1e0e0; color: black;  margin-top: 10px; margin-left: 11%; border:black; border-style:solid; border-width:2px;">
         </div>
     </form>
     
@@ -142,16 +142,7 @@
   
 </table>
  </div>
-    <div style="position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   height: 30px;
-   background-color: rgba(0,0,0,0.8);
-   color: white;
-   text-align: center;">
-  <h4 style="color: white;">&copy <b>2018 Crime Portal | All Right Reserved</b></h4>
-</div>
+    
 
  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>

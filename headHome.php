@@ -70,7 +70,7 @@ session_start();
     
     </script>
 </head>
-<body style="background-image: url(search1.jpeg); ">
+<body style="background:#4d2600;">
 	<nav  class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -90,7 +90,7 @@ session_start();
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="active" ><a href="headHome.php">View Complaints</a></li>
-        <li ><a href="head_view_police_station.php">Police Station</a></li>
+        <li ><a href="head_view_police_station.php">Incharge</a></li>
         <li><a href="h_logout.php">Logout &nbsp <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
       </ul>
     </div>
@@ -101,7 +101,7 @@ session_start();
     <form style="margin-top: 10%; margin-left: 40%;" method="post">
       <input type="text" name="cid" style="width: 250px; height: 30px;" placeholder="&nbsp Complaint Id" id="ciid" onfocusout="f1()" required>
         <div>
-      <input class="btn btn-primary" type="submit" value="Search" name="s1" style="margin-top: 10px; margin-left: 11%;">
+      <input class="btn btn-primary" type="submit" value="Search" name="s1" style="margin-top: 10px; margin-left: 11%; border:black; border-width:2px; border-style:solid;">
      </div>
      </form>
         
@@ -119,19 +119,11 @@ session_start();
                         ?>
      </select>
         
-          <input class="btn btn-primary" type="submit" value="Search" name="s2" style="margin-top: 10px; margin-left: 11%;">
+          <input class="btn btn-primary" type="submit" value="Search" name="s2" style="margin-top: 10px; margin-left: 11%; border:black; border-width:2px; border-style:solid;">
     </form>
  </div>
     
-<div style="position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: rgba(0,0,0,0.5);
-   color: white;
-   text-align: center;">
-  <h4 style="color: white;">&copy <b>Crime Portal 2018</b></h4>
-</div>
+
     
 
  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>

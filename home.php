@@ -100,33 +100,31 @@
                                     Crime Diaries is basically a crime reporting system where people can log a complaint without any fear of their identity
 disclosure infront of any third party. Our system provides the most userfriendly environment where after logging the complaint user can track its status. We
 strongly focus on providing the justice to the victims by all the fair means by connecting it to the higher officials. 
+
+<br> <br> <b>
+Highest Crime Rate State in India 2021 :- <b>
                                 </p>
                             </div>
                             <div class="skills">
                                 <div class="skill-name">
-                                    <p>Web Design</p><p>85%</p>
+                                    <p>Uttar Pradesh</p><p>15.2%</p>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="15.2" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 <div class="skill-name">
-                                    <p>Web Development</p><p>95%</p>
+                                    <p>Maharashtra</p><p>10.7%</p>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="10.7" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 <div class="skill-name">
-                                    <p>Apps Design</p><p>90%</p>
+                                    <p>Bihar & West Bengal</p><p>10.4%</p>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="10.4" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
-                                <div class="skill-name">
-                                    <p>Apps Development</p><p>85%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+                                
                            
                     </div>
                 </div>

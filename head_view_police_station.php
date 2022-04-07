@@ -23,7 +23,7 @@
 
 
 </head>
-<body>
+<body style="background:#4d2600;">
 	<nav  class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -45,7 +45,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="headHome.php">View Complaints</a></li>
-        <li class="active" ><a href="head_view_police_station.php">Police Station</a></li>
+        <li class="active" ><a href="head_view_police_station.php">Incharge</a></li>
         <li><a href="h_logout.php">Logout &nbsp <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
       </ul>
     </div>
@@ -54,7 +54,7 @@
    
  <div  style="margin-top: 10%;margin-left: 45%">
      
-   <a href="police_station_add.php" class="btn btn-primary">Add Police Station</a>
+   <a href="police_station_add.php" class="btn btn-primary" style="border:black; border-width:2px; border-style:solid;">Add Incharge</a>
  </div>
     
 <div style="padding:50px;">

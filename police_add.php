@@ -90,9 +90,7 @@ if(isset($_POST['s'])){
 </script>
 </head>
 
-<body style="background-size: cover;
-    background-image: url(home_bg1.jpeg);
-    background-position: center;">
+<body style=" background: #424242;">
 	<nav  class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -111,7 +109,7 @@ if(isset($_POST['s'])){
       </ul>
      
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="police_add.php">Log Police Officer</a></li>
+        <li class="active"><a href="police_add.php">Add Police</a></li>
         <li><a href="Incharge_complain_page.php">Complaint History</a></li>
         <li><a href="inc_logout.php">Logout &nbsp <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
       </ul>
@@ -122,7 +120,7 @@ if(isset($_POST['s'])){
 	<div class="center-container">
 		 <div class="bg-agile">
 			<br><br>
-			<div class="login-form"><p><h2>Log Police Officer</h2></p><br>	
+			<div class="login-form"><p><h2>Assign Police Officer</h2></p><br>	
 				<form action="#" method="post" style="color: gray">Police Name
 					<input type="text"  name="police_name" placeholder="Police Name" required="" id="pname" onfocusout="f1()"/>
 					Police Id<input type="text"  name="police_id" placeholder="Police Id" required="" id="pid" onfocusout="f1()"/>

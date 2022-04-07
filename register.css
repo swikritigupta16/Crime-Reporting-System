@@ -232,7 +232,9 @@
   }
   
   .btn--green:hover {
-    background: #4dae3c;
+    background: white;
+    border-color: #00b3b3;
+    border-width: 2px;
   }
   
   

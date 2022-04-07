@@ -26,7 +26,7 @@
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
 </head>
-<body >
+<body style="background:#4d2600;">
 	<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -49,6 +49,7 @@
   </div>
  </nav>
  
+ <br>
  <div style="padding:50px; margin-top:10px;">
    <table class="table table-bordered">
        <thead class="thead-dark" style="background-color: black; color: white;">

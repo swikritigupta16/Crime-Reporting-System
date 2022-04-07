@@ -32,7 +32,7 @@
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     
    
-    <body style="background-color: #dfdfdf;">
+    <body style="background-color: #222D32;">
 	   <nav  class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             
@@ -56,7 +56,7 @@
          </div>
         </nav>
  
-        <div style="padding:50px;margin-top:10px;">
+        <div style="padding:50px;margin-top:25px;">
             <table class="table table-bordered">
             <thead class="thead-dark" style="background-color: black; color: white;">
                 <tr>
@@ -107,16 +107,7 @@
             </table>
         </div>
     
-        <div style="position: absolute;
-          left: 0;
-          bottom: 0;
-          width: 100%;
-          height: 30px;
-          background-color: rgba(0,0,0,0.8);
-          color: white;
-          text-align: center;">
-         <h4 style="color: white;">&copy <b>Crime Diaries...</b></h4>
-       </div> 
+       
     
      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
      <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>

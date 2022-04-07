@@ -37,7 +37,7 @@ if(isset($_POST['s'])){
             
         else
     {
-        $message = "Police Station Added Successfully";
+        $message = "Incharge Added Successfully";
         echo "<script type='text/javascript'>alert('$message');</script>";
     }
     }
@@ -79,9 +79,7 @@ if(isset($_POST['s'])){
 </script>
 </head>
 
-<body style="background-size: cover;
-    background-image: url(home_bg1.jpeg);
-    background-position: center;">
+<body style="background:#222D32;">
 	<nav  class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -100,7 +98,7 @@ if(isset($_POST['s'])){
       </ul>
      
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="police_station_add.php">Log Police Station</a></li>
+        <li class="active"><a href="police_station_add.php">Add Incharge</a></li>
       <li> <a href="h_logout.php">Logout &nbsp <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
       </ul>
     </div>
@@ -111,9 +109,24 @@ if(isset($_POST['s'])){
 		 <div class="bg-agile">
 			<br><br>
 			<div class="login-form"><p>
-                <h2>Log Police Station</h2><br>
+                <h2>Assign Incharge</h2><br>
       <form  method="post" style="color: gray">Police Station Location
-          <input type="text"  name="location" placeholder="Station Location" required="" id="station" onfocusout="f1()"/>
+          
+
+          <select class="form-control" name="location" required="" id="station" onfocusout="f1()" >
+						<?php
+                        $loc=mysqli_query($con,"select location from complaint");
+                        while($row=mysqli_fetch_array($loc))
+                        {
+                            ?>
+                                	<option> <?php echo $row[0]; ?> </option>
+                            <?php
+                        }
+                        ?>
+					
+				    </select>
+
+
       Incharge Name
 					<input type="text"  name="incharge_name" placeholder="Incharge Name" required="" id="iname" onfocusout="f1()"/>
 					Incharge Id<input type="text"  name="incharge_id" placeholder="Incharge Id" required="" id="iid" onfocusout="f1()"/>

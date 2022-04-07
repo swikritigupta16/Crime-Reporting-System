@@ -49,7 +49,7 @@
 }
 </script>
 </head>
-<body>
+<body style="background:#424242;">
 	<nav  class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">

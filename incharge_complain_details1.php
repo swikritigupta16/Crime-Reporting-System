@@ -17,13 +17,13 @@
     $cid=$_SESSION['cid'];
         
     $i_id=$_SESSION['email'];
-    $result1=mysqli_query("SELECT location FROM police_station where i_id='$i_id'",$conn);
+    $result1=mysqli_query($conn,"SELECT location FROM police_station where i_id='$i_id'");
     $q2=mysqli_fetch_assoc($result1);
     $location=$q2['location'];
     
     $query="select c_id,type_crime,d_o_c,description from complaint where c_id='$cid' and location='$location' order by c_id desc";
-    $result=mysqli_query($query,$conn); 
-    $res2=mysqli_query("select d_o_u,case_update from update_case where c_id='$cid'",$conn);
+    $result=mysqli_query($conn,$query); 
+    $res2=mysqli_query($conn,"select d_o_u,case_update from update_case where c_id='$cid'");
     ?>
 
 	<title>Incharge Homepage</title>
@@ -31,7 +31,7 @@
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body style="background-color: rgb(0, 0, 77);">
 	<nav  class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -113,16 +113,7 @@
 </table>
  </div>
     
- <div style="position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   height: 30px;
-   background-color: rgba(0,0,0,0.8);
-   color: white;
-   text-align: center;">
-  <h4 style="color: white;">&copy <b>Crime Portal 2018</b></h4>
-</div>
+ 
 
  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+ 
+   
     <?php
     session_start();
     
@@ -78,7 +80,7 @@
 </head>
 
     
-<body style="background-color: #dfdfdf">
+<body style=" background:#222D32;">
         <nav  class="navbar navbar-default navbar-fixed-top">
               <div class="container">
                   
@@ -108,10 +110,16 @@
         </nav>
 
 
+    <br>
+
     <div>
         <form style="float: right; margin-right: 100px; margin-top: 65px;" method="post">
+            <label>  <h5 style="color: white; background:black;  padding:8px;"> 
+            <b> Complaint Details </b> </h5>  </label>  &nbsp; &nbsp;
             <input type="text" name="cid" style="width: 250px; height: 30px; color: black;" placeholder="&nbsp Complain Id" id="ciid" onfocusout="f1()" required>
-            <input class="btn btn-primary btn-sm" type="submit" value="Search" style="margin-top:2px; margin-left:20px;" name="s2">
+            <input class="btn btn-primary btn-sm" type="submit" value="Search" style=" background: #0DB8DE; 
+            color:white; border:black; border-width:2px; border-style:solid; margin-top:2px; margin-left:20px;" name="s2"> 
+        <br> <br> 
         </form>
     </div>
 
@@ -144,20 +152,16 @@
     } 
     ?>
   
-</table>
- </div>
-<div style="position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   height: 30px;
-   background-color: rgba(0,0,0,0.8);
-   color: white;
-   text-align: center;">
-  <h4 style="color: white;">&copy <b>Crime Portal 2018</b></h4>
-</div> 
+      </table>
+    </div>
+
+
+
+
 
  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 </body>
+
 </html>

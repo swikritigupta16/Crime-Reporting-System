@@ -56,7 +56,7 @@
        }
     </script>
 </head>
-<body style="background-color: #dfdfdf">
+<body style="background-color: rgb(0, 0, 77);">
 	<nav  class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -84,7 +84,7 @@
   </div>
  </nav>
  <div  style="margin-top: 10%;margin-left: 45%">
-   <a href="police_add.php"><input  type="button" name="add" value="Add Police Officers" class="btn btn-primary"></a>
+   <a href="police_add.php"><input style="background: #d1e0e0; color:black;" type="button" name="add" value="Add Police" class="btn btn-primary"></a>
  </div>
     
     <div style="padding:50px;">
@@ -126,16 +126,7 @@
     </form>
     
     
-<div style="position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   height: 30px;
-   background-color: rgba(0,0,0,0.8);
-   color: white;
-   text-align: center;">
-  <h4 style="color: white;">&copy <b>Crime Portal 2018</b></h4>
-</div>
+
 
  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
