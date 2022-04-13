@@ -14,11 +14,13 @@
     session_start();
     if(!isset($_SESSION['x']))
         header("location:headlogin.php");
+        $con=mysqli_connect("localhost","root","","crime_portal");
+
 if(isset($_POST['s'])){
-    $con=mysqli_connect('localhost','root','','crime_portal');
+   
     if(!$con)
     {
-        die('could not connect: '.mysqli_error());
+        die("could not connect: ".mysqli_error());
     }
     if($_SERVER["REQUEST_METHOD"]=="POST"){
         $loc=$_POST['location'];
@@ -112,26 +114,25 @@ if(isset($_POST['s'])){
                 <h2>Assign Incharge</h2><br>
       <form  method="post" style="color: gray">Police Station Location
           
-
-          <select class="form-control" name="location" required="" id="station" onfocusout="f1()" >
+          <select class="form-control" name="location" style="width: 300px;">
 						<?php
-                        $loc=mysqli_query($con,"select location from complaint");
+                        $loc=mysqli_query($con,"select DISTINCT location from complaint");
                         while($row=mysqli_fetch_array($loc))
                         {
-                            ?>
+                            ?>                                                                                                    
                                 	<option> <?php echo $row[0]; ?> </option>
                             <?php
                         }
                         ?>
 					
-				    </select>
+				    </select>  
 
 
       Incharge Name
-					<input type="text"  name="incharge_name" placeholder="Incharge Name" required="" id="iname" onfocusout="f1()"/>
-					Incharge Id<input type="text"  name="incharge_id" placeholder="Incharge Id" required="" id="iid" onfocusout="f1()"/>
+					<input type="text"  name="incharge_name" placeholder="Incharge Name" required="" id="iname" onfocusout="f1()" style="width: 300px;"/>
+					Incharge Id<input type="text"  name="incharge_id" placeholder="Incharge Id" required="" id="iid" onfocusout="f1()" style="width: 300px;"/>
 					<br>
-					Password<input type="text"  name="password" placeholder="Password" required="" id="pas" onfocusout="f1()"/>
+					Password<input type="text"  name="password" placeholder="Password" required="" id="pas" onfocusout="f1()" style="width: 300px;"/>
 					<input type="submit" value="Submit" name="s">
 				</form>	
 			</div>	

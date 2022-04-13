@@ -307,7 +307,7 @@ if(sta2!="" && x2>=0){
                 <div class="container-content">
                     <form class="margin-t" method="post">
                         <div class="form-group">
-                            <input type="text" name="email" class="form-control" placeholder="Username" required="" id="exampleInputEmail1" aria-describedby="emailHelp"  onfocusout="f1()">
+                            <input type="text" name="email" class="form-control" placeholder="Police ID" required="" id="exampleInputEmail1" aria-describedby="emailHelp"  onfocusout="f1()">
                         </div>
                         <div class="form-group">
                             <input type="password" name="password" class="form-control" placeholder="Password" required="" id="exampleInputPassword1" onfocusout="f1()" >

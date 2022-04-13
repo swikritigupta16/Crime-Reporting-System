@@ -34,6 +34,10 @@ session_start();
     }
     }
     
+
+    $query="select c_id,a_no,location,type_crime,d_o_c,description,inc_status,pol_status, p_id
+            from complaint order by c_id";
+    $result=mysqli_query($conn,$query);  
         
 ?>
 
@@ -109,7 +113,7 @@ session_start();
      <select name="loc" class="form-control" style="width: 250px;">
          
 						<?php
-                        $loc=mysqli_query($conn,"select location from police_station");
+                        $loc=mysqli_query($conn,"select DISTINCT location from complaint");
                         while($row=mysqli_fetch_array($loc))
                         {
                             ?>
@@ -121,6 +125,54 @@ session_start();
         
           <input class="btn btn-primary" type="submit" value="Search" name="s2" style="margin-top: 10px; margin-left: 11%; border:black; border-width:2px; border-style:solid;">
     </form>
+
+
+    <div style="padding:50px;">
+      <table class="table table-bordered">
+       <thead class="thead-dark" style="background-color: black; color: white;">
+         <tr>
+          <th scope="col">Complaint Id</th>
+          <th scope="col">Aadhar No.</th>
+          <th scope="col">Location</th>
+          <th scope="col">Type of Crime</th>
+          <th scope="col">Date of Crime</th>
+          <th scope="col">Description</th>
+          <th scope="col">Incharge Status</th>
+          <th scope="col">Case Status</th>
+          <th scope="col">Police Id</th>
+        </tr>
+      </thead>
+
+<?php
+      while($rows=mysqli_fetch_assoc($result)){
+    ?> 
+
+    <tbody style="background-color: white; color: black;">
+      <tr>
+        <td><?php echo $rows['c_id']; ?></td>
+        <td><?php echo $rows['a_no']; ?></td>     
+        <td><?php echo $rows['location']; ?></td>          
+        <td><?php echo $rows['type_crime']; ?></td>  
+        <td><?php echo $rows['d_o_c']; ?></td>
+        <td><?php echo $rows['description']; ?></td>     
+        <td><?php echo $rows['inc_status']; ?></td>          
+        <td><?php echo $rows['pol_status']; ?></td>
+        <td><?php echo $rows['p_id']; ?></td>          
+      </tr>
+    </tbody>
+    
+    <?php
+    } 
+    ?>
+  
+      </table>
+    </div>
+
+
+
+
+
+
  </div>
     
 

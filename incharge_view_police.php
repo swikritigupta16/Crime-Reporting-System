@@ -4,15 +4,16 @@
     
     <?php
     session_start();
+    $conn=mysqli_connect('localhost','root','','crime_portal');
     if(!isset($_SESSION['x']))
         header("location:inchargelogin.php");
     
-    $conn=mysqli_connect("localhost","root","","crime_portal");
+    
     if(!$conn)
     {
-        die("could not connect".mysqli_error());
+        die('could not connect'.mysqli_error());
     }
-    mysqli_select_db($conn,"crime_portal");
+    mysqli_select_db($conn,'crime_portal');
     
     $i_id=$_SESSION['email'];
 
@@ -20,6 +21,49 @@
       
     $q2=mysqli_fetch_assoc($result1);
     $location=$q2['location'];
+
+
+
+    if(isset($_POST['s3']))
+    {
+        if($_SERVER["REQUEST_METHOD"]=="POST")
+        {
+
+          
+            $pid=$_POST['p_id'];
+
+            
+           
+            $p_name=$_POST['p_name'];
+            $p_sp=$_POST['p_sp'];
+            $p_loc=$_POST['p_loc'];
+          
+           
+            if($_POST['p_name']){
+              
+              $q4=mysqli_query($conn,"update police set p_name='$p_name' where p_id='$pid'");
+              echo "<script type='text/javascript'>alert('Police Name Updated!!');</script>";
+            }
+
+            elseif($_POST['p_sp']){
+              
+              $q4=mysqli_query($conn,"update police set spec='$p_sp' where p_id='$pid'");
+              echo "<script type='text/javascript'>alert('Speciality Updated!!');</script>";
+            }
+
+            elseif($_POST['p_loc']){
+              
+              $q4=mysqli_query($conn,"update police set location='$p_loc' where p_id='$pid'");
+              echo "<script type='text/javascript'>alert('Location Updated!!');</script>";
+            }
+    
+            else{
+              
+            } 
+
+        }
+      }  
+
     
      if(isset($_POST['s2']))
     {
@@ -54,6 +98,25 @@
         }
         
        }
+
+
+
+       function ShowHideDiv() {
+        var edit = document.getElementById("edit");
+
+        var i = document.getElementById("i");
+        var n = document.getElementById("n");
+        var sp = document.getElementById("sp");
+        var l = document.getElementById("l");
+
+        i.style.display = edit.value == "ID" ? "block" : "none";
+        n.style.display = edit.value == "Name" ? "block" : "none";
+        sp.style.display = edit.value == "Sp" ? "block" : "none";
+        l.style.display = edit.value == "Loc" ? "block" : "none";
+    }
+
+
+
     </script>
 </head>
 <body style="background-color: rgb(0, 0, 77);">
@@ -119,7 +182,56 @@
  </div>
     
     <form style="margin-top: 5%; margin-left: 40%;" method="post">
-      <input type="text" name="pid" style="width: 250px; height: 30px; background-color:white;" placeholder="&nbsp Police Id" id="ciid" onfocusout="f1()" required>
+
+
+    <input type="text" name="p_id" style="width: 250px; height: 30px; background-color:white;" placeholder="&nbsp Police Id" id="ciid" onfocusout="f1()" >
+    <br> <br>
+    <select class="form-control" name="edit" id="edit" onchange = "ShowHideDiv()" style="width:250px;">
+
+                        <option>Choose to Edit</option>
+						            
+                        <option value="Name">Police Name</option>
+                        <option value="Sp">Specialist</option>
+                        <option value="Loc">Location</option>
+                  
+				    </select>
+				
+          </div>
+
+        <div id="i" style="display: none">
+                <hr>
+                <h4 style="color:white;">Police ID </h4>
+                <input type="text" />
+               </div>  
+
+        <div id="n" style="display: none">
+                <hr>
+                <h4 style="color:white;">Police Name </h4>
+                <input type="text" name="p_name"/>
+               </div>  
+
+        <div id="sp" style="display: none;">
+                <hr>
+                <h4 style="color:white;">Specialist </h4>
+                <input type="text" name="p_sp"/>
+               </div>  
+
+        <div id="l" style="display: none">
+                <hr>
+                <h4 style="color:white;">Location </h4>
+                <input type="text" name="p_loc"/>
+               </div>  
+       
+
+        <div>
+      <input class="btn btn-warning" type="submit" value="Update Police" name="s3" style="margin-top: 10px; margin-left: 9%;">
+        </div>
+
+      <br> <br>
+
+
+
+      <input type="text" name="pid" style="width: 250px; height: 30px; background-color:white;" placeholder="&nbsp Police Id" id="ciid" onfocusout="f1()" >
         <div>
       <input class="btn btn-danger" type="submit" value="Delete Police" name="s2" style="margin-top: 10px; margin-left: 9%;">
         </div>
