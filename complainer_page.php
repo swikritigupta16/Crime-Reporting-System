@@ -31,10 +31,18 @@ if(isset($_POST['s'])){
     {
         die('could not connect: '.mysqli_error());
     }
+
+
+      $target_dir = "file/";
+      $file_name=basename($_FILES["file"]["name"]);
+      $target_file = $target_dir . $file_name;
+      $uploadOk = 1;
+      $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+
     if($_SERVER["REQUEST_METHOD"]=="POST")
     {
-        
-      
+
         $location=$_POST['location'];
 
         $type_crime = "type_crime";
@@ -52,17 +60,42 @@ if(isset($_POST['s'])){
           
         }
 
-
         $d_o_c=$_POST['d_o_c'];
         $description=$_POST['description'];
         
         $var=strtotime(date("Ymd"))-strtotime($d_o_c);
-   
-        
+
+ 
+
+	// Check if image file is a actual image or fake image
+	
+  	$check = getimagesize($_FILES["file"]["tmp_name"]);
+  	if($check !== false) {
+    	echo "File is an image - " . $check["mime"] . ".";
+    	$uploadOk = 1;
+  	} else {
+    	echo "File is not an image.";
+    	$uploadOk = 0;
+  	}
+	
+	if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+	&& $imageFileType != "gif" && $imageFileType != "PNG" ) {
+  	echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+  	$uploadOk = 0;
+	}
+
+	// Check if $uploadOk is set to 0 by an error
+	if ($uploadOk == 0) {
+  	echo "Sorry, your file was not uploaded.";
+	// if everything is ok, try to upload file
+} else {
+  if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)){
+
+      
     if($var>=0)
     {
           
-      $comp="INSERT into complaint(a_no,location,type_crime,d_o_c,description) values('$a_no','$location','$type_crime','$d_o_c','$description')";
+      $comp="INSERT into complaint(a_no,file,location,type_crime,d_o_c,description) values('$a_no','$file_name','$location','$type_crime','$d_o_c','$description')";
       mysqli_select_db($conn,"crime_portal"); 
       $res=mysqli_query($conn,$comp);
       
@@ -83,6 +116,8 @@ if(isset($_POST['s'])){
       echo "<script type='text/javascript'>alert('$message');</script>";
     }
   }
+}
+ }
 }
 ?>
     
@@ -159,13 +194,13 @@ function ShowHideDiv() {
 			<br><br>
 			<div class="login-form"><p><h2 style="color:white">Welcome <?php echo "$u_name" ?></h2></p><br>
                                     <p style="color:#0DB8DE;"><h2>Log New Complain</h2></p><br>	
-				<form action="#" method="post" style="color: gray">Aadhar
+				<form action="#" method="post" style="color: gray" enctype="multipart/form-data">Aadhar
 					<input type="text"  name="aadhar_number" placeholder="Aadhar Number" required="" disabled value=<?php echo "$a_no"; ?>>
 					
           
           <div class="top-w3-agile" style="color: gray">Upload Aadhar Card/ Govt. Official ID 
           <br><br>
-          <input type="file" style="top-padding:10px;" name="aadhar_pic" placeholder="" required=""> 
+          <input type="file" style="top-padding:10px;" name="file" id="file"  placeholder="" required=""> 
           </div>
           <br>
 
