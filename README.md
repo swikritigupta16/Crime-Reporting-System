@@ -35,4 +35,4 @@ Import the crime_portal.sql file into your MySQL server.
 
 Make sure Apache and MySQL are running (e.g., via XAMPP/LAMP/MAMP).
 
-4.Navigate to http://localhost/Crime-Reporting-System in your browser.
+4.Navigate to http://localhost/Crime-Reporting-System/home.php in your browser.
