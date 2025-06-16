@@ -29,7 +29,7 @@ We created a website with 4 functionalities which includes login pages for user,
 
 2.Set up the database
 
-Import the crime.sql file into your MySQL server.
+Import the crime_portal.sql file into your MySQL server.
 
 3.Start the server
 
