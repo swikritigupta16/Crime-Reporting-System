@@ -25,61 +25,7 @@ We created a website with 4 functionalities which includes login pages for user,
 1. **Clone the repository**
    ```bash
    git clone https://github.com/swikritigupta16@gmail.com/Crime-Reporting-System.git
-   cd your-repo-name
-   ```
-   ChatGPT
-You said:
-Read me file for GitHub project built on html css bootstrap js php mysql
-ChatGPT said:
-Here's a professional and informative README.md file template for your GitHub project that uses HTML, CSS, Bootstrap, JavaScript, PHP, and MySQL. You can customize it with your project-specific details:
-
-# Project Title
-
-A brief description of your project and what it does.
-
-## 🚀 Features
-
-- Responsive design using Bootstrap
-- Frontend built with HTML, CSS, and JavaScript
-- Backend developed in PHP
-- MySQL database integration
-- (Optional: Add any special features like user authentication, admin dashboard, charts, etc.)
-
-## 🖼️ Demo
-
-[Live Demo](#) (optional)
-
-Screenshots (optional):
-
-![Home Page](screenshots/home.png)
-![Dashboard](screenshots/dashboard.png)
-
-## 📁 Project Structure
-
-/project-root
-│
-├── index.html / index.php # Entry point
-├── /css # Custom CSS files
-├── /js # JavaScript files
-├── /includes # Reusable PHP files (e.g. DB connection)
-├── /assets # Images, icons, etc.
-├── /pages # Internal pages (e.g. login, dashboard)
-├── /sql # SQL dump or schema
-└── .htaccess # Apache config (if applicable)
-
-
-## 🛠️ Tech Stack
-
-- **Frontend**: HTML, CSS, Bootstrap, JavaScript
-- **Backend**: PHP
-- **Database**: MySQL
-
-## ⚙️ Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
+   cd Crime-Reporting-System
 
 2.Set up the database
 
